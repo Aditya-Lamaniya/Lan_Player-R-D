@@ -891,7 +891,7 @@ MonoBehaviour:
   m_MaxConnectAttempts: 60
   m_DisconnectTimeoutMS: 30000
   ConnectionData:
-    Address: 192.168.197.20
+    Address: 192.168.1.46
     Port: 7777
     ServerListenAddress: 
   DebugSimulator:
@@ -1165,7 +1165,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 6046305264893698362, guid: 398aad09d8b2a47eba664a076763cdcc, type: 3}
         m_TargetAssemblyTypeName: Unity.Netcode.Samples.BootstrapPlayer, Bootstrap
-        m_MethodName: test
+        m_MethodName: RandomTeleportServerRpc
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
