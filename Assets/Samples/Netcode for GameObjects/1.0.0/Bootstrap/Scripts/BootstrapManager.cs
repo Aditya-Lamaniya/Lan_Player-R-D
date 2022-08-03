@@ -46,6 +46,7 @@ namespace Unity.Netcode.Samples
                             {
                                 // Invoke a `ServerRpc` from client-side to teleport player to a random position on the server-side
                                 bootstrapPlayer.RandomTeleportServerRpc();
+                                Debug.Log("recived");
                             }
                         }
                     }
