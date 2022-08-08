@@ -404,7 +404,7 @@ GameObject:
   - component: {fileID: 165113138}
   - component: {fileID: 165113137}
   m_Layer: 5
-  m_Name: Client panel
+  m_Name: Server panel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -660,7 +660,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1810436106}
         m_TargetAssemblyTypeName: Network_UI_Manger, Assembly-CSharp
-        m_MethodName: ClientStatus
+        m_MethodName: ServerStatus
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1074,6 +1074,18 @@ MonoBehaviour:
           m_StringArgument: Server
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1595475931}
+        m_TargetAssemblyTypeName: NetworkFunctions, Assembly-CSharp
+        m_MethodName: DisplayMessageClientRpc
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: server connected
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &839176016
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1198,7 +1210,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1810436106}
         m_TargetAssemblyTypeName: Network_UI_Manger, Assembly-CSharp
-        m_MethodName: ClientStatus
+        m_MethodName: ServerStatus
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1534,7 +1546,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1810436106}
         m_TargetAssemblyTypeName: Network_UI_Manger, Assembly-CSharp
-        m_MethodName: ClientStatus
+        m_MethodName: ServerStatus
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1676,10 +1688,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startpanel: {fileID: 2130953731}
-  Clientpanel: {fileID: 165113135}
-  ServerMessage: {fileID: 2107388288}
+  Serverpanel: {fileID: 165113135}
+  ClientMessage: {fileID: 2107388288}
   networkFunctions: {fileID: 1595475931}
-  servertxt: {fileID: 2107388290}
+  Clienttxt: {fileID: 2107388290}
 --- !u!4 &1810436107
 Transform:
   m_ObjectHideFlags: 0
@@ -1716,7 +1728,7 @@ MonoBehaviour:
   m_MaxConnectAttempts: 60
   m_DisconnectTimeoutMS: 30000
   ConnectionData:
-    Address: 
+    Address: 127.0.0.1
     Port: 7777
     ServerListenAddress: 
   DebugSimulator:
