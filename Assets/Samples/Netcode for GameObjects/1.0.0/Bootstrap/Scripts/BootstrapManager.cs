@@ -8,13 +8,13 @@ namespace Unity.Netcode.Samples
     /// </summary>
     public class BootstrapManager : MonoBehaviour
     {
-
+        
         private void OnGUI()
         {
             //GUILayout.BeginArea(new Rect(10, 10, 300, 300));
 
             var networkManager = NetworkManager.Singleton;
-
+            
             if (!networkManager.IsClient && !networkManager.IsServer)
             {
                 if (GUILayout.Button("Host"))
@@ -48,8 +48,7 @@ namespace Unity.Netcode.Samples
                             {
                                 // Invoke a `ServerRpc` from client-side to teleport player to a random position on the server-side
                                 bootstrapPlayer.RandomTeleportServerRpc();
-                                Debug.Log("recived");
-                                
+                                Debug.Log("recived");   
                             }
                         }
                     }
